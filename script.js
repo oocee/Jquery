@@ -8,8 +8,21 @@ $(document).ready(function(){
     function loadData() {
     var stationId = $('#station').val();
     console.log(stationId);
-    var data = $.getJSON("/live-trains/station/"+stationId+"?arrived_trains=5&arriving_trains=20&departed_trains=5&departing_trains=20", function(data) {
-    })
+    $.getJSON('https://rata.digitraffic.fi/api/v1/live-trains/station/'+stationId+'?arrived_trains=5&arriving_trains=5&departed_trains=5&departing_trains=5&include_nonstopping=false', function(data, status) {
+        if (status = 200) {
+            $.each(data, function(i, v) {
+                console.log(v.trainNumber);
+            })
+
+        }
+        if (status = 403) {
+            alert('error');
+        }
+        if (status = 404) {
+            alert('error');
+        }
     console.log(data);
+    })
+
     }
 });
