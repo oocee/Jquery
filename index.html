@@ -6,22 +6,32 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
 </head>
+<body>
+    
     <div>
-        <select name="stations" id="station">
-            <option value="HKI">Helsinki</option>
-            <option value="PSL">Pasila</option>
-            <option value="TKL">Tikkurila</option>
-            <option value="TPE">Tampere</option>
-            <option value="SK">Seinäjoki</option>
-            <option value="KOK">Kokkola</option>
-            <option value="KNS">Kannus</option>
-            <option value="YV">Ylivieska</option>
-            <option value="OU">Oulainen</option>
-            <option value="VTI">Vihanti</option>
-        </select>
+        <header id="head">
+            <h1>Departing Trains</h1>
+        </header>
+        <div id="sele">
+            <select name="stations" id="station">
+                <option>Choose station</option>
+                <option value="HKI">Helsinki</option>
+                <option value="PSL">Pasila</option>
+                <option value="TKL">Tikkurila</option>
+                <option value="TPE">Tampere</option>
+                <option value="SK">Seinäjoki</option>
+                <option value="KOK">Kokkola</option>
+                <option value="KNS">Kannus</option>
+                <option value="YV">Ylivieska</option>
+                <option value="OU">Oulainen</option>
+                <option value="VTI">Vihanti</option>
+            </select>
+        </div>
     </div>
-    <table id="arrTrains" class="pure-table pure-table-bordered">
+    <div id="body">
+        <table id="arrTrains" class="pure-table pure-table-bordered">
 
-    </table>
-
+        </table>
+    </div>  
+</body>
 </html>
